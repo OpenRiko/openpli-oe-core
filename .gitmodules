@@ -9,10 +9,10 @@
 [submodule "bitbake"]
 	path = bitbake
 	url = git://git.openembedded.org/bitbake
-	ignore = dirty
+	ignore = dirty	
 [submodule "meta-openpli/recipes-openpli/e2openplugins"]
 	path = meta-openpli/recipes-openpli/e2openplugins
-	url = git://github.com/E2OpenPlugins/e2openplugins.git
+	url =https://github.com/E2OpenPlugins/e2openplugins.git
 	ignore = dirty
 [submodule "meta-formuler"]
 	path = meta-formuler
@@ -22,7 +22,10 @@
 	url = https://github.com/HD-Digital/meta-hd.git
 [submodule "meta-vuplus"]
 	path = meta-vuplus
-	url = http://github.com/vu-plus/meta-vuplus.git
+	url = http://github.com/vu-plus/meta-vuplus.git	
+[submodule "meta-dream"]
+	path = meta-dream
+	url = http://github.com/OpenRiko/openpli-oe-core/tree/release-6.1
 [submodule "meta-xp"]
 	path = meta-xp
 	url = https://github.com/XP-Master/meta-xp.git
