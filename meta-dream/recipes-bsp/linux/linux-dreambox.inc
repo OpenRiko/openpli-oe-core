@@ -13,18 +13,31 @@ PACKAGES_DYNAMIC = "kernel-*"
 KERNEL_BUILTIN_MODULES = "kernel-module-block2mtd"
 
 KERNEL_BUILTIN_MODULES_dm8000 = "\
-	kernel-module-aes-generic \
-	kernel-module-block2mtd \
-	kernel-module-crc32c \
-	kernel-module-fuse \
-	kernel-module-mac80211 \
-	kernel-module-cfg80211 \
-	kernel-module-ath \
-	kernel-module-ath5k \
-	kernel-module-sr-mod \
-	kernel-module-isofs \
-	kernel-module-udf \
 	kernel-module-stv0299 \
+	"
+KERNEL_BUILTIN_MODULES_dm800se = "\
+	kernel-module-block2mtd \
+	kernel-module-stv0299 \
+	"
+KERNEL_BUILTIN_MODULES_dm800sev2 = "\
+	kernel-module-block2mtd \
+	kernel-module-stv0299 \
+	"
+KERNEL_BUILTIN_MODULES_dm7020hd = "\
+	kernel-module-block2mtd \
+	kernel-module-fuse \
+	kernel-module-stv0299 \
+	"
+KERNEL_BUILTIN_MODULES_dm7020hdv2 = "\
+	kernel-module-block2mtd \
+	kernel-module-fuse \
+	kernel-module-stv0299 \
+	"
+KERNEL_BUILTIN_MODULES_dm500hd = "\
+	kernel-module-block2mtd \
+	"
+KERNEL_BUILTIN_MODULES_dm500hdv2 = "\
+	kernel-module-block2mtd \
 	"
 
 # By default, kernel.bbclass modifies package names to allow multiple kernels
@@ -36,7 +49,6 @@ RPROVIDES_kernel-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION} ${KERNEL_BUILTIN_MODULES}"
 
 USB_ROOT = "/dev/sdb2"
-USB_ROOT_dm8000 = "/dev/sdf2"
 
 do_install_append() {
         ${STRIP} ${D}/${KERNEL_IMAGEDEST}/${KERNEL_IMAGETYPE}-${KERNEL_VERSION}
